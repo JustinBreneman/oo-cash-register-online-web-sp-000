@@ -12,7 +12,10 @@ class CashRegister
   def add_item(name, price, quantity = 1)
     @total += (price * quantity)
     quantity.times{@items << name}
-    binding.pry
+    @item_info["#{name}"] = Hash.new
+    @item_info["#{name}"]["price"]=price
+    @item_info["#{name}"][quantity]=quantity
+    #binding.pry
     #@item_info["#{name}"] = [price, quantity]
   end
 
