@@ -14,7 +14,7 @@ class CashRegister
     quantity.times{@items << name}
     @item_info["#{name}"] = Hash.new
     @item_info["#{name}"]["price"]=price
-    @item_info["#{name}"][quantity]=quantity
+    @item_info["#{name}"]["quantity"]=quantity
     #binding.pry
     #@item_info["#{name}"] = [price, quantity]
   end
