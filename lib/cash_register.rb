@@ -12,7 +12,8 @@ class CashRegister
   def add_item(name, price, quantity = 1)
     @total += (price * quantity)
     quantity.times{@items << name}
-    @item_info["#{name}"] = [price, quantity]
+    binding.pry
+    #@item_info["#{name}"] = [price, quantity]
   end
 
   def apply_discount
@@ -27,6 +28,6 @@ class CashRegister
 
   def void_last_transaction
     last_item = @items[-1]
-    binding.pry
+#    binding.pry
   end
 end
