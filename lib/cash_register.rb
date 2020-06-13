@@ -15,8 +15,6 @@ class CashRegister
     @item_info["#{name}"] = Hash.new
     @item_info["#{name}"]["price"]=price
     @item_info["#{name}"]["quantity"]=quantity
-    #binding.pry
-    #@item_info["#{name}"] = [price, quantity]
   end
 
   def apply_discount
@@ -31,6 +29,7 @@ class CashRegister
 
   def void_last_transaction
     last_item = @items[-1]
-    binding.pry
+    @total -= @
+    #binding.pry
   end
 end
